@@ -1,0 +1,140 @@
+// 样式变量覆盖表参考 nutui variables
+// https://github.com/jdf2e/nutui/blob/next/src/packages/styles/variables.scss
+
+// 主色调
+$primary-background-color: #f7f7f7;
+$primary-color: #2761FF;
+$primary-color-end: #2761FF;
+
+// 辅助色
+$help-color: #060505 !default;
+// 标题常规文字
+$title-color: #333333 !default;
+// 副标题
+$title-color2: #666666 !default;
+// 次内容
+$text-color: #808080 !default;
+// 特殊禁用色
+$disable-color: #cccccc !default;
+
+//overlay
+$overlay-bg-color: rgba(0, 0, 0, 0.4) !default;
+
+// divider
+$divider-text-color: #cccccc !default;
+
+// tabs
+$tabs-horizontal-tab-line-color: #2761FF;
+
+// TimeDetail
+$timeselect-timedetail-item-cur-bg-color: $primary-color !default;
+
+
+// 使用方法 @include flex(...)
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+// 替代 android端 gap失效问题  使用方式 @include gap(10px);
+@mixin gap($size) {
+  margin-bottom: calc(0px - $size);
+  margin-right: calc(0px - $size);
+  & > view,
+  & > * {
+    margin-right: $size;
+    margin-bottom: $size;
+  }
+}
+@mixin row_gap($size) {
+  margin-bottom: calc(0px - $size);
+  & > view,
+  & > * {
+    margin-bottom: $size;
+  }
+}
+@mixin column_gap($size) {
+  margin-right: calc(0px - $size);
+  & > view,
+  & > * {
+    margin-right: $size;
+  }
+}
+// nutui cell 通用覆盖样式
+@mixin nuiui_cell() {
+  :deep(.nut-cell) {
+    margin: 0;
+  }
+  :deep(.nut-cell__value) {
+    --nut-cell-desc-color: #1a1a1a;
+  }
+  :deep(.nut-cell__title) {
+    --nut-form-item-label-font-size: 28rpx;
+    width: var(--nut-form-item-label-width, 180rpx);
+    margin-right: var(--nut-form-item-label-margin-right, 20rpx);
+    flex: none;
+  }
+  :deep(.nut-cell-group__wrap) {
+    margin: 0;
+  }
+
+  :deep(.nut-cell__link),
+  :deep(.nut-icon-right) {
+    --nut-icon-width: 20rpx;
+    --nut-icon-height: 20rpx;
+    --nut-icon-line-height: 20rpx;
+    font-size: 20rpx;
+    display: flex;
+    align-self: center;
+    margin-left: 10rpx;
+    margin-top: 2rpx;
+  }
+}
+
+@mixin retina-one-px-border($direction: top, $color: #eeeeee, $left: 0, $right: 0) {
+  position: absolute;
+  left: $left;
+  top: 0;
+  box-sizing: border-box;
+
+  @if $direction == top or $direction == bottom {
+    right: $right;
+    height: 0;
+    transform: scaleY(0.5);
+    border-top: 1px solid $color;
+  }
+  @if $direction == bottom {
+    top: auto;
+    bottom: 0;
+  }
+  @if $direction == right or $direction == left {
+    width: 0;
+    bottom: 0;
+    transform: scaleX(0.5);
+    border-left: 1px solid $color;
+  }
+  @if $direction == right {
+    left: auto;
+    right: 0;
+  }
+  @if $direction == all {
+    width: 200%;
+    height: 200%;
+    transform-origin: left top;
+    transform: scale(0.5);
+    border: 1px solid $color;
+  }
+}
+
+@mixin sass-ellipsis($clamp: 1) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: pre-wrap;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;
+  // /* autoprefixer: off */
+  // -webkit-box-orient: vertical;
+  // /* autoprefixer: on */
+  overflow: hidden;
+}

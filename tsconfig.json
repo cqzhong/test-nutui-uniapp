@@ -1,0 +1,57 @@
+{
+  // "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "target": "esnext",
+    "noImplicitAny": false, // 是否默认禁用 any
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "useDefineForClassFields": true,
+    "outDir": "lib",
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "sourceMap": true, // 生成相应的 .map文件。
+    "baseUrl": ".", // 解析非相对模块名的基准目录
+    "rootDir": ".",
+    "allowJs": true,
+    // "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+    "types": [
+      "nutui-uniapp/global.d.ts",
+      "@dcloudio/types",
+      "vite/client"
+    ],
+    "paths": { // 路径映射，相对于baseUrl
+      // 如使用jq时不想使用默认版本，而需要手动指定版本，可进行如下配置
+      "@/*": ["./src/*"],
+      "@/package": ["./package.json"]
+    },
+    "plugins": [
+      {
+        "name": "@vuedx/typescript-plugin-vue"
+      }
+    ]
+  },
+  "include": [
+    "src/*.vue",
+    "src/**/*.vue",
+    "src/*.nvue",
+    "src/**/*.nvue",
+    "src/*.ts",
+    "src/**/*.ts",
+    "src/*.d.ts",
+    "src/**/*.tsx",
+    "auto-imports.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "compileOnSave": false
+}

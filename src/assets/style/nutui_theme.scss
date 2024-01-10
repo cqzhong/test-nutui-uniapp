@@ -1,0 +1,59 @@
+// 替换掉默认的 nutui-uniapp/styles/variables.scss 的rpx
+// Font
+$font-size-0: 20rpx !default;
+$font-size-1: 24rpx !default;
+$font-size-2: 28rpx !default;
+$font-size-3: 32rpx !default;
+$font-size-4: 36rpx !default;
+$font-weight-bold: 400 !default;
+
+$font-size-small: $font-size-1 !default;
+$font-size-base: $font-size-2 !default;
+$font-size-large: $font-size-3 !default;
+$line-height-base: 1.5 !default;
+
+// tabs
+$tabs-tab-smile-color: $primary-color !default;
+$tabs-tabpane-padding: 48rpx 40rpx !default;
+$tabs-titles-border-radius: 0 !default;
+$tabs-horizontal-tab-line-color: linear-gradient(90deg, $primary-color 0%, rgba($primary-color, 0.15) 100%) !default;
+$tabs-horizontal-titles-height: 92rpx !default;
+$tabs-horizontal-titles-item-min-width: 100rpx !default;
+$tabs-horizontal-titles-item-active-line-width: 80rpx !default;
+$tabs-vertical-tab-line-color: linear-gradient(180deg, $primary-color 0%, rgba($primary-color, 0.15) 100%) !default;
+$tabs-vertical-titles-item-height: 80rpx !default;
+$tabs-vertical-titles-item-active-line-height: 28rpx !default;
+$tabs-vertical-titles-width: 200rpx !default;
+$tabs-titles-item-line-border-radius: 3rpx !default;
+$tabs-titles-item-line-opacity: 1 !default;
+
+// searchbar
+$searchbar-padding: 18rpx 32rpx !default;
+$searchbar-width: 100% !default;
+$searchbar-input-background: #f7f7f7 !default;
+$searchbar-input-padding: 0 0 0 26rpx !default;
+$searchbar-input-height: 64rpx !default;
+$searchbar-input-width: 100% !default;
+$searchbar-input-border-radius: 32rpx !default;
+$searchbar-input-box-shadow: 0 0 16rpx 0 rgba(0, 0, 0, 0.04) !default;
+$searchbar-input-bar-color: inherit !default;
+$searchbar-input-bar-placeholder-color: inherit !default;
+
+// cell
+// $cell-title-font: $font-size-2 !default;
+// $cell-title-desc-font: $font-size-1 !default;
+// $cell-desc-font: $font-size-2 !default;
+// $cell-large-title-font: $font-size-large !default;
+// $cell-large-title-desc-line-height: inherit !default;
+// $cell-large-title-desc-font: $font-size-base !default;
+// $cell-large-padding: 15px 16px !default;
+// $cell-default-large-icon-margin: 0 4px 0 0px !default;
+// $cell-default-large-icon-size: 20px !default;
+// $cell-default-large-icon-font-size: 20px !default;
+// $cell-large-icon-link-height: 20px !default;
+// $cell-background: $white !default;
+
+// form
+$form-item-label-font-size: $font-size-2 !default;
+$form-item-body-font-size: $font-size-2 !default;
+$form-item-tip-font-size: $font-size-0 !default;

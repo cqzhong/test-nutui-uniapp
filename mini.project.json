@@ -1,0 +1,29 @@
+{
+  "brand": "mPaaS uniapp",
+  "miniprogramRoot": "dist/mpaas/mp-alipay",
+  "scripts": {
+    "beforeCompile": "yarn mpaas:before-compile",
+    "beforePreview": "yarn mpaas:before-preview",
+    "beforeUpload": "yarn mpaas:beforeu-upload"
+  },
+  "exclude": [
+    "src/**",
+    "node_modules",
+    "node_modules/**",
+    "app.json",
+    "babel.config.js",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js",
+    "yarn.lock"
+  ],
+  "precompileWatch": {
+    "selfWatch": true,
+    "restart": true,
+    "exclude": [
+      "dist/mpaas/mp-alipay/**",
+      "*.md"
+    ],
+    "ignoreBuiltInExts": false
+  }
+}

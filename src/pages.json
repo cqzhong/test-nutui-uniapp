@@ -1,0 +1,49 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+      "^nut-(.*)?-(.*)": "nutui-uniapp/components/$1$2/$1$2.vue",
+      "^nut-(.*)": "nutui-uniapp/components/$1/$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/home/index",
+      "name": "home",
+			"style": {
+        "h5": {
+          "titleNView": false
+        },
+        "mp-weixin": {
+          "navigationStyle": "custom"
+        },
+        "mp-alipay": {
+          "navigationBarTitleText": "",
+          "transparentTitle": "always",
+          "titlePenetrate": "YES",
+          "allowsBounceVertical": "NO",
+          "enableScrollBar": "NO"
+        }
+			}
+		}
+	],
+  "subPackages": [{
+		"root": "setting-subpackage",
+		"pages": [{
+			"path": "pages/setting/index",
+      "name": "setting",
+			"style": {
+        "navigationBarTitleText": "设置"
+			}
+		}]
+	}],
+	"globalStyle": {
+    // #ifdef H5
+    "titleNView":false,
+    // #endif
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "霖久科技-SAAS",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F3F4F5"
+	}
+}

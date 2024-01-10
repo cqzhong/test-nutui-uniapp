@@ -1,0 +1,15 @@
+node_modules
+dist
+hybrid
+*.min.js
+/public
+/src/uni_modules
+/src/tmui
+*.css
+*.less
+*.scss
+*.jpg
+*.png
+*.gif
+*.svg
+*vue.d.ts
